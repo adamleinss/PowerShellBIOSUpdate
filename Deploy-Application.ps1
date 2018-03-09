@@ -146,7 +146,12 @@ Try {
         { $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps and connect to AC power' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
           if ($Response -eq 'Cancel') { exit 12345 }
 
-          New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+          if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
+
               Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
 
           set-location $dirfiles\XPS13
@@ -165,7 +170,13 @@ Try {
         { $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps and connect to AC power' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
           if ($Response -eq 'Cancel') { exit 12345 }
 
-          New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+          
+          if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
+
               Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
         
           Suspend-BitLocker -MountPoint C: -RebootCount 1 -Confirm:$false
@@ -180,7 +191,13 @@ Try {
         { $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps and connect to AC power' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
           if ($Response -eq 'Cancel') { exit 12345 }
 
-          New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+          
+          if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
+
               Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
         
           Suspend-BitLocker -MountPoint C: -RebootCount 1 -Confirm:$false
@@ -195,7 +212,13 @@ Try {
         { $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps and connect to AC power' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
           if ($Response -eq 'Cancel') { exit 12345 }
 
-          New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+         
+          if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
+
               Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
 
           Suspend-BitLocker -MountPoint C: -RebootCount 1 -Confirm:$false
@@ -209,8 +232,13 @@ Try {
 
         { $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps and connect to AC power' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
           if ($Response -eq 'Cancel') { exit 12345 }
+          
+          if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
 
-          New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
               Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
         
           Suspend-BitLocker -MountPoint C: -RebootCount 1 -Confirm:$false
@@ -230,7 +258,13 @@ Try {
             { $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
               if ($Response -eq 'Cancel') { exit 12345 }
 
-              New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+              
+          if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
+
               Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
 
               set-location $dirfiles\M900
@@ -243,7 +277,13 @@ Try {
             { $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
               if ($Response -eq 'Cancel') { exit 12345 }
 
-              New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             
+          if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
+
               Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
 
               set-location $dirfiles\M900
@@ -256,7 +296,13 @@ Try {
             { $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
               if ($Response -eq 'Cancel') { exit 12345 }
 
-              New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+              
+          if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
+
               Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
 
               set-location $dirfiles\M900
@@ -269,7 +315,13 @@ Try {
             { $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
               if ($Response -eq 'Cancel') { exit 12345 }
 
-              New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             
+          if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
+
               Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
 
               set-location $dirfiles\M900
@@ -286,7 +338,13 @@ Try {
             { $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
               if ($Response -eq 'Cancel') { exit 12345 }
 
-              New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+              
+          if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
+
               Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
 
               set-location $dirFiles\M710Q
@@ -302,8 +360,13 @@ Try {
 
             { $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
               if ($Response -eq 'Cancel') { exit 12345 }
+              
+          if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
 
-              New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
               Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
 
               set-location $dirfiles\M93P
@@ -316,7 +379,13 @@ Try {
             { $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
               if ($Response -eq 'Cancel') { exit 12345 }
 
-              New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+              
+          if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
+
               Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
 
               set-location $dirfiles\M93P
@@ -329,7 +398,13 @@ Try {
             { $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
               if ($Response -eq 'Cancel') { exit 12345 }
 
-              New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+              
+          if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
+
               Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
 
               set-location $dirfiles\M93P
@@ -342,7 +417,13 @@ Try {
             { $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
               if ($Response -eq 'Cancel') { exit 12345 }
 
-              New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+              
+          if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
+
               Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
 
               set-location $dirfiles\M93P
@@ -355,7 +436,13 @@ Try {
             { $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
               if ($Response -eq 'Cancel') { exit 12345 }
 
-              New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+              
+          if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
+
               Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
 
               set-location $dirfiles\M93P
@@ -368,7 +455,13 @@ Try {
             { $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
               if ($Response -eq 'Cancel') { exit 12345 }
 
-              New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+              
+          if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
+
               Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
 
               set-location $dirfiles\M93P
@@ -381,7 +474,13 @@ Try {
             { $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
               if ($Response -eq 'Cancel') { exit 12345 }
 
-              New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+              
+          if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
+
               Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
 
               set-location $dirfiles\M93P
@@ -394,7 +493,13 @@ Try {
             { $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
               if ($Response -eq 'Cancel') { exit 12345 }
 
-              New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+              
+          if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
+
               Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
 
               set-location $dirfiles\M93P
@@ -412,6 +517,16 @@ Try {
         { 
 		  $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps and connect to AC power' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
           if ($Response -eq 'Cancel') { exit 12345 }
+
+          
+          if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
+
+          Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
+
 		  set-location $dirfiles\YogaS1
           Suspend-BitLocker -MountPoint C: -RebootCount 1 -Confirm:$false
           start-process winuptp.exe -ArgumentList '-s' -Wait -PassThru
@@ -427,7 +542,13 @@ Try {
           $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps and connect to AC power' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
           if ($Response -eq 'Cancel') { exit 12345 }
 
-          New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+          
+          if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
+
               Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
 
           set-location $dirfiles\YogaS1
@@ -449,8 +570,13 @@ Try {
           $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
           if ($Response -eq 'Cancel') { exit 12345 }
 
-          New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
-              Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
+            if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
+
+          Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
 
           set-location $dirfiles\E32
           start-process flash.cmd -ArgumentList '/quiet' -Wait -PassThru
@@ -505,7 +631,12 @@ Try {
           $Response = Show-InstallationPrompt -Message 'Executing BIOS update...please close all apps' -ButtonRightText 'Cancel' -ButtonLeftText 'Continue' -Timeout 600
           if ($Response -eq 'Cancel') { exit 12345 }
 
-          New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+              if (-not (Test-Path HKLM:\Software\ACMEDesktop))
+            {
+  
+                New-Item -Path HKLM:SOFTWARE -Name ACMEDesktop -Force
+             }
+
               Set-ItemProperty -Path HKLM:SOFTWARE\ACMEDesktop -Name MeltdownFirmwareFix -Value "Yes" -Type String
 
           set-location $dirfiles\P310
